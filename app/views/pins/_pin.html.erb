@@ -1,8 +1,8 @@
-<%= link_to (pin) do %>
+
 	<div class="box">
-		<%= image_tag pin.image(:medium) %>
+	 <%= link_to (image_tag pin.image(:medium)), pin %>
 		<p class="description">
-			<%= pin.description %>
+			<%= link_to (pin.description), pin %>
 		</p>
 	  <p>
 	    <strong>
@@ -16,4 +16,3 @@
 		<p>
 		<% end %>
 	</div>
-<% end %>

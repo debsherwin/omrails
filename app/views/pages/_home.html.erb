@@ -1,7 +1,5 @@
-<% if user_signed_in? %>
-	<h2>Welcome! You're logged in!</h2>
+<% unless user_signed_in? %>
 
-<% else %>
 <div class="hero-unit">
 	<h1>Welcome to Deb's awesome site</h1>
 	<p>
