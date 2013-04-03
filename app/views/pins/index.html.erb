@@ -1,6 +1,24 @@
 
 <%= render 'pages/home' %>
 
+
+  <%if user_signed_in? %>
+ <div class="well">
+    <h1>Hi <%= current_user.name %> </h1>
+ </div>
+<%else %>
+  <div class="well">
+   <p>
+      What could have saved hours.
+    </p>
+    <p>
+      <%= link_to "Sign UP Now!", new_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "Sign IN Now!", new_user_session_path, class: "btn btn-primary" %>
+    </p>
+  </div>
+
+  <%end %>
+
 <div id="pins">
   <%= render @pins %>
 </div>
