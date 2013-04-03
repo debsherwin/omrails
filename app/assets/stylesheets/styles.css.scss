@@ -1,17 +1,17 @@
 $baseFontFamily:'Merriweather Sans', sans-serif;
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,300,800);
 
+/* Bootstrap global overides */
 $btnPrimaryBackground: gray;
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
 $linkColor: gray;
 
 
-
 @import 'bootstrap';
 
 body {
-	padding-top:100px;
+	padding-top:110px;
 }
 
 @import 'bootstrap-responsive';
@@ -39,9 +39,9 @@ body {
   font-size: 11px;
   line-height: 1.4em;
   float: left;
-  /* box-shadow: 1px 1px 10px #444;*/
-  width: 200px;
-  border: 1px solid #00F2FF;
+  box-shadow: 2px 2px 0px #000;
+  width: 190px;
+  border: 1px solid #FF00E1;
 }
 
 .box img {
@@ -64,18 +64,33 @@ body {
 
 
 a:hover {
-  color:red;
+  color:#FF00E1;
   text-decoration:none;
 }
 
 .navbar {
-  border-bottom: 1px solid #FF00E1;
+  border-bottom: 1px solid #00F2FF;
 }
 
 .page {
-
-  border-right: 1px solid #FF00E1;
-  border-left: 1px solid #FF00E1;
+  padding:30px;
+  padding-top:none;
+  border-right: 1px solid #00F2FF;
+  border-left: 1px solid #00F2FF;
 
 }
 
+.masthead {
+  clear:both;
+  padding-top:20px;
+}
+
+.well {
+  margin: 0 10px 0 10px;
+}
+
+
+.description {
+  font-size: 1.7em;
+  padding-bottom: 10px;
+}

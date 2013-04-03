@@ -11,9 +11,15 @@
 		    </strong> 
 		  </p>
 			<p>
+				<% if user_signed_in? %>
+				<%= link_to 'Like', class: "btn btn-small" %>
+				<%= link_to 'Upvote', class: "btn btn-small" %>
+			<p>
+					<% end %>
+			<p>
 				<% if current_user == pin.user %>
-				<%= link_to 'Edit', edit_pin_path(pin) %>
-				<%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+				<%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-small" %>
+				<%= link_to 'Remove', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-small" %>
 			<p>
 			<% end %>
 		</div>
