@@ -10,4 +10,6 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_many :pins, dependent: :destroy
+
+  # acts_as_votable :voter
 end

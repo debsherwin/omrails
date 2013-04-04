@@ -1,3 +1,13 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+	
+
 
 	<div class="box">
 	 <%= link_to (image_tag pin.image(:medium)), pin %>
@@ -12,15 +22,20 @@
 		  </p>
 			<p>
 				<% if user_signed_in? %>
-				<%= link_to 'Like', class: "btn btn-small" %>
-				<%= link_to 'Upvote', class: "btn btn-small" %>
-			<p>
+				
+				<!-- <div class="fb-like" data-href="http://facebook.com" data-send="true" data-width="100" data-show-faces="false" data-font="arial" data-colorscheme="dark"></div> -->
+
+				<%= link_to 'Like', class: "btn btn-small" %> 
+				<%= link_to 'Upvote', pin.vote(:vote => 'like'), class: "btn btn-small" %>
+		
 					<% end %>
-			<p>
+			
 				<% if current_user == pin.user %>
 				<%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-small" %>
 				<%= link_to 'Remove', pin, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-small" %>
-			<p>
+			</p>
 			<% end %>
 		</div>
 	</div>
+
+
