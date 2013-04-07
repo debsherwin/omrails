@@ -19,6 +19,17 @@
 
   <%end %>
 
+<div class="sort">
+  sort TiWILs by
+  <%= link_to 'Most Popular', '#', class: "btn btn-small" %> 
+  <%= link_to 'Indesign', '#', class: "btn btn-small" %>
+  <%= link_to 'Illustrator', '#', class: "btn btn-small" %> 
+  <%= link_to 'Photoshop', '#', class: "btn btn-small" %>
+  <%= link_to 'Print Production', '#', class: "btn btn-small" %>
+  <%= link_to 'Clients', '#', class: "btn btn-small" %>
+  <%= link_to 'Web', '#', class: "btn btn-small" %>
+</div>
+
 <div id="pins">
   <%= render @pins %>
 </div>
@@ -26,25 +37,4 @@
 
 
 
-<!--
-<h1>Listing pins</h1>
 
-<table class="table table-striped">
-    <thead>
-     <tr>
-      <th>Image</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <%=render @pins  %>
-  </tbody>
-</table>
-
-<br />
-
--->

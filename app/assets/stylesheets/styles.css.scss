@@ -1,7 +1,8 @@
-$baseFontFamily:'Merriweather Sans', sans-serif;
-@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,300,800);
+$baseFontFamily:'Montserrat', sans-serif;
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 /* Bootstrap global overides */
+
 $btnPrimaryBackground: gray;
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
@@ -36,8 +37,8 @@ body {
 .box {
   margin: 20px;
   /*  padding: 5px;*/
-  font-size: 11px;
-  line-height: 1.4em;
+  /* font-size: 11px;
+  line-height: 1.4em; */
   float: left;
   box-shadow: 2px 2px 0px #000;
   width: 190px;
@@ -53,13 +54,16 @@ body {
   margin: 10px;
 }
 
-.description {
-  margin: 10px 0 5px;
+.show .box {
+  width: 350px;
+  clear: both;
 }
 
-.mashead {
-  margin: auto;
-  padding: auto;
+.description {
+  margin: 10px 0 5px;
+  font-size: 1.3em; 
+  line-height: 1.7; 
+  padding-bottom: 10px;
 }
 
 
@@ -87,10 +91,13 @@ a:hover {
 
 .well {
   margin: 0 10px 0 10px;
+  border: none;
+  border-radius:none;
+}
+
+.sort {
+  padding: 20px;
 }
 
 
-.description {
-  font-size: 1.7em;
-  padding-bottom: 10px;
-}
+
