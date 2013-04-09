@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404000857) do
+ActiveRecord::Schema.define(:version => 20130409061414) do
 
   create_table "installs", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20130404000857) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "image_remote_url"
+    t.integer  "votes"
   end
 
   add_index "pins", ["user_id"], :name => "index_pins_on_user_id"
@@ -56,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20130404000857) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "name"
+    t.boolean  "admin"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

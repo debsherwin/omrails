@@ -1,12 +1,4 @@
-	<!-- <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script> -->
-	
+
 
 
 	<div class="box">
@@ -17,17 +9,16 @@
 			</p>
 		  <p>
 		    <strong>
-		        Posted by <%= pin.user.name %>
+		        Posted by <%= link_to pin.user.name, pin.user %>
 		    </strong> 
 		  </p>
 			<p>
 				<% if user_signed_in? %>
 				
-				<!-- <div class="fb-like" data-href="http://facebook.com" data-send="true" data-width="100" data-show-faces="false" data-font="arial" data-colorscheme="dark"></div> -->
+				
 
-				<%= link_to 'Like', '#', class: "btn btn-small" %> 
-				<%= link_to 'Upvote', '#', class: "btn btn-small" %>
-		
+				<%=  link_to 'Upvote', root_path, method: :vote, class: "btn btn-small" %>
+				<%=  pin.votes.size %> votes
 					<% end %>
 			
 				<% if current_user == pin.user %>

@@ -22,17 +22,20 @@
 <div class="sort">
   sort TiWILs by
   <%= link_to 'Most Popular', '#', class: "btn btn-small" %> 
-  <%= link_to 'Indesign', '#', class: "btn btn-small" %>
-  <%= link_to 'Illustrator', '#', class: "btn btn-small" %> 
-  <%= link_to 'Photoshop', '#', class: "btn btn-small" %>
-  <%= link_to 'Print Production', '#', class: "btn btn-small" %>
-  <%= link_to 'Clients', '#', class: "btn btn-small" %>
-  <%= link_to 'Web', '#', class: "btn btn-small" %>
+  <%= link_to 'Indesign', '#', class: "btn disabled" %>
+  <%= link_to 'Illustrator', '#', class: "btn disabled" %> 
+  <%= link_to 'Photoshop', '#', class: "btn disabled" %>
+  <%= link_to 'Print Production', '#', class: "btn disabled" %>
+  <%= link_to 'Clients', '#', class: "btn disabled" %>
+  <%= link_to 'Web', '#', class: "btn disabled" %>
 </div>
 
 <div id="pins">
   <%= render @pins %>
 </div>
+
+<%= will_paginate @pins %>
+
 
 
 
